@@ -1,11 +1,79 @@
 import { Star, Users, TrendingUp, Award } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
 
 const stats = [
-  { icon: Users, label: "Sites livrés", value: "+50" },
-  { icon: TrendingUp, label: "Visibilité moyenne", value: "+85%" },
-  { icon: Star, label: "Note Google", value: "4.9/5" },
-  { icon: Award, label: "Clients satisfaits", value: "100%" },
+  { icon: Users, label: "Sites livrés", value: 50, prefix: "+", suffix: "" },
+  { icon: TrendingUp, label: "Visibilité moyenne", value: 85, prefix: "+", suffix: "%" },
+  { icon: Star, label: "Note Google", value: 4.9, prefix: "", suffix: "/5", decimals: 1 },
+  { icon: Award, label: "Clients satisfaits", value: 100, prefix: "", suffix: "%" },
 ];
+
+function useCountUp(end: number, duration: number = 2000, decimals: number = 0) {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentValue = easeOutQuart * end;
+      
+      setCount(Number(currentValue.toFixed(decimals)));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [hasStarted, end, duration, decimals]);
+
+  return { count, ref };
+}
+
+function StatItem({ stat }: { stat: typeof stats[0] }) {
+  const { count, ref } = useCountUp(stat.value, 2000, stat.decimals || 0);
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-2xl mb-4">
+        <stat.icon className="w-7 h-7 text-primary" />
+      </div>
+      <p className="font-display text-3xl font-bold text-foreground tabular-nums">
+        {stat.prefix}{count}{stat.suffix}
+      </p>
+      <p className="text-muted-foreground">{stat.label}</p>
+    </div>
+  );
+}
 
 export function TrustSection() {
   return (
@@ -13,13 +81,7 @@ export function TrustSection() {
       <div className="container-digkal">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-2xl mb-4">
-                <stat.icon className="w-7 h-7 text-primary" />
-              </div>
-              <p className="font-display text-3xl font-bold text-foreground">{stat.value}</p>
-              <p className="text-muted-foreground">{stat.label}</p>
-            </div>
+            <StatItem key={index} stat={stat} />
           ))}
         </div>
 
