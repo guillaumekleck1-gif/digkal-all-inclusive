@@ -1,10 +1,21 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Clock, Menu, X } from "lucide-react";
+import { Phone, Mail, Clock, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
+  { 
+    label: "Services", 
+    href: "#",
+    submenu: [
+      { label: "Création de site web", href: "/services/creation-site-web" },
+      { label: "SEO & Référencement", href: "/services/seo-referencement" },
+      { label: "Google Business Profile", href: "/services/google-business-profile" },
+      { label: "Création de contenu", href: "/services/creation-contenu" },
+      { label: "Optimisation continue", href: "/services/optimisation-continue" },
+    ]
+  },
   { label: "Offres", href: "/offres" },
   { label: "Réalisations", href: "/realisations" },
   { label: "À propos", href: "/a-propos" },
@@ -54,17 +65,43 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.submenu ? (
+                <div key={link.label} className="relative group">
+                  <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                    {link.label}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-background border border-border rounded-xl shadow-lg py-2 min-w-[220px]">
+                      {link.submenu.map((sublink) => (
+                        <Link
+                          key={sublink.href}
+                          to={sublink.href}
+                          className={`block px-4 py-2 text-sm transition-colors hover:bg-primary/5 hover:text-primary ${
+                            location.pathname === sublink.href
+                              ? "text-primary bg-primary/5"
+                              : "text-muted-foreground"
+                          }`}
+                        >
+                          {sublink.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    location.pathname === link.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -92,18 +129,40 @@ export function Header() {
           <div className="lg:hidden bg-background border-t border-border animate-fade-in">
             <nav className="container-digkal py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-2 transition-colors ${
-                    location.pathname === link.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.submenu ? (
+                  <div key={link.label} className="space-y-2">
+                    <span className="text-base font-medium text-foreground py-2">{link.label}</span>
+                    <div className="pl-4 space-y-2">
+                      {link.submenu.map((sublink) => (
+                        <Link
+                          key={sublink.href}
+                          to={sublink.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block text-sm py-1 transition-colors ${
+                            location.pathname === sublink.href
+                              ? "text-primary"
+                              : "text-muted-foreground"
+                          }`}
+                        >
+                          {sublink.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`text-base font-medium py-2 transition-colors ${
+                      location.pathname === link.href
+                        ? "text-primary"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="outline" asChild>
