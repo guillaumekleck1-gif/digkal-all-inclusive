@@ -8,18 +8,21 @@ const services = [
     title: "Création du site web",
     description: "Design professionnel, pages optimisées, mobile-first, vitesse, sécurité et tracking intégré.",
     color: "primary",
+    link: "/services/creation-site-web",
   },
   {
     icon: Search,
     title: "SEO & visibilité",
     description: "Optimisation SEO, stratégie mots-clés, structure du site, maillage interne et performance.",
     color: "accent",
+    link: "/services/seo-referencement",
   },
   {
     icon: MapPin,
     title: "Page Google & contenu",
     description: "Optimisation Google Business Profile, publications, photos, FAQ, gestion des avis et contenus.",
     color: "primary",
+    link: "/services/google-business-profile",
   },
 ];
 
@@ -39,9 +42,10 @@ export function FormulaSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="group bg-card rounded-3xl p-8 border border-border shadow-card card-hover"
+              to={service.link}
+              className="group bg-card rounded-3xl p-8 border border-border shadow-card card-hover block"
             >
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
                 service.color === "accent" 
@@ -54,13 +58,13 @@ export function FormulaSection() {
                     : "text-primary"
                 }`} />
               </div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-4">
+              <h3 className="font-display text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                 {service.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 
