@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Clock, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import logoDigkal from "@/assets/logo-digkal-web.jpg";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -55,11 +56,8 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container-digkal flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">D</span>
-            </div>
-            <span className="font-display font-bold text-2xl text-foreground">Digkal</span>
+          <Link to="/" className="flex items-center">
+            <img src={logoDigkal} alt="Digkal Web - Création de sites web et SEO" className="h-12 md:h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

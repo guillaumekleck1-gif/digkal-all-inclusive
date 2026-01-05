@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logoDigkal from "@/assets/logo-digkal-web.jpg";
 
 export function Footer() {
   return (
@@ -8,11 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">D</span>
-              </div>
-              <span className="font-display font-bold text-2xl">Digkal</span>
+            <Link to="/" className="flex items-center">
+              <img src={logoDigkal} alt="Digkal Web - Création de sites web et SEO" className="h-14 w-auto" />
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Création de sites web et référencement SEO. Nous gérons tout pour vous apporter des clients.
