@@ -18,7 +18,7 @@ export function HeroSection() {
           <div className="space-y-8 animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
               <Zap className="w-4 h-4" />
-              Site web livré en 72h
+              Votre site web dès 45€/mois
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
