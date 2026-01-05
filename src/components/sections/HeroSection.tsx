@@ -17,8 +17,8 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              Agence web & SEO tout-en-un
+              <Zap className="w-4 h-4" />
+              Site web livré en 72h
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
@@ -36,7 +36,7 @@ export function HeroSection() {
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Globe className="w-5 h-5 text-primary" />
                 </div>
-                <span className="text-foreground font-medium">Création du site + mise en ligne rapide</span>
+                <span className="text-foreground font-medium">Création du site en 72h + mise en ligne</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-digkal-accent/10 flex items-center justify-center">
