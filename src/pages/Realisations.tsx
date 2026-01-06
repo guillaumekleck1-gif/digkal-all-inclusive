@@ -33,6 +33,18 @@ const projects = [
   },
   {
     id: 3,
+    name: "Dynamix Ingénierie",
+    category: "PME",
+    image: "https://static.wixstatic.com/media/32e815_7c1f3d8c9e2c4e8a9f3b5d7e1c4a2b8f~mv2.png/v1/fill/w_1920,h_900,al_c,q_90,enc_avif,quality_auto/dynamix-hero.png",
+    result: "+40% demandes",
+    description: "Site vitrine bureau d'études structure + SEO B2B",
+    context: "Bureau d'études spécialisé en conception et dimensionnement de structures béton, métal et bois.",
+    objective: "Développer la visibilité auprès des architectes, maîtres d'œuvre et entreprises du BTP.",
+    work: "Création d'un site vitrine professionnel présentant les expertises (conception, diagnostic, assistance technique), optimisation SEO B2B et formulaire de demande d'étude.",
+    url: "https://dynamix-ingenierie.fr",
+  },
+  {
+    id: 4,
     name: "Menuiserie Dupont",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -43,7 +55,7 @@ const projects = [
     work: "Création d'un site vitrine moderne, optimisation SEO locale, Google Business Profile.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Immo Paris 15",
     category: "Immobilier",
     image: "/placeholder.svg",
@@ -54,7 +66,7 @@ const projects = [
     work: "Site premium, pages SEO par quartier, intégration CRM.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Plombier Express",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -65,7 +77,7 @@ const projects = [
     work: "Site optimisé vitesse, SEO urgence, landing pages par service.",
   },
   {
-    id: 6,
+    id: 7,
     name: "Tech Solutions",
     category: "PME",
     image: "/placeholder.svg",
@@ -76,7 +88,7 @@ const projects = [
     work: "Site corporate, blog avec stratégie de contenu, landing pages.",
   },
   {
-    id: 7,
+    id: 8,
     name: "Bistrot du Coin",
     category: "Restaurants",
     image: "/placeholder.svg",
