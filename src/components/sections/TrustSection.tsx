@@ -4,6 +4,7 @@ import stradimLogo from "@/assets/clients/stradim.png";
 import sopremaLogo from "@/assets/clients/soprema.png";
 import oreEauLogo from "@/assets/clients/ore-eau.png";
 import imBuerehoftLogo from "@/assets/clients/im-buerehoft.png";
+import dynamixLogo from "@/assets/clients/dynamix.png";
 
 const stats = [
   { icon: Users, label: "Sites livrés", value: 50, prefix: "+", suffix: "" },
@@ -105,11 +106,9 @@ export function TrustSection() {
             <a href="https://www.buerehoft.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-foreground rounded-lg hover:shadow-md transition-shadow">
               <img src={imBuerehoftLogo} alt="Im Buerehoft" className="h-8 object-contain" />
             </a>
-            {["Client E"].map((client, index) => (
-              <div key={index} className="px-6 py-3 bg-muted rounded-lg opacity-60">
-                <span className="font-medium text-muted-foreground">{client}</span>
-              </div>
-            ))}
+            <a href="https://dynamix-ingenierie.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <img src={dynamixLogo} alt="Dynamix Ingénierie" className="h-10 object-contain" />
+            </a>
           </div>
         </div>
       </div>
