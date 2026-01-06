@@ -1,6 +1,7 @@
 import { Star, Users, TrendingUp, Award } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import stradimLogo from "@/assets/clients/stradim.png";
+import sopremaLogo from "@/assets/clients/soprema.png";
 
 const stats = [
   { icon: Users, label: "Sites livrés", value: 50, prefix: "+", suffix: "" },
@@ -93,7 +94,10 @@ export function TrustSection() {
             <a href="https://www.stradim.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <img src={stradimLogo} alt="Stradim" className="h-8 object-contain" />
             </a>
-            {["Client B", "Client C", "Client D", "Client E"].map((client, index) => (
+            <a href="https://www.soprema.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <img src={sopremaLogo} alt="Soprema" className="h-8 object-contain" />
+            </a>
+            {["Client C", "Client D", "Client E"].map((client, index) => (
               <div key={index} className="px-6 py-3 bg-muted rounded-lg opacity-60">
                 <span className="font-medium text-muted-foreground">{client}</span>
               </div>
