@@ -57,6 +57,13 @@ const plans = [
 const Offres = () => {
   return (
     <Layout>
+      {/* Banner */}
+      <div className="bg-primary text-primary-foreground py-3 text-center">
+        <p className="text-lg font-semibold">
+          🎉 Votre site web à partir de <span className="text-2xl font-bold">45€/mois</span>
+        </p>
+      </div>
+
       {/* Hero */}
       <section className="bg-gradient-to-b from-digkal-light to-background section-padding">
         <div className="container-digkal text-center">
