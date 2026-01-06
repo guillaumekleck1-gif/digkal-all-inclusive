@@ -90,9 +90,9 @@ export function TrustSection() {
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-muted-foreground text-sm mb-6">Ils nous font confiance</p>
           <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="px-6 py-3 bg-white rounded-lg">
+            <a href="https://www.stradim.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <img src={stradimLogo} alt="Stradim" className="h-8 object-contain" />
-            </div>
+            </a>
             {["Client B", "Client C", "Client D", "Client E"].map((client, index) => (
               <div key={index} className="px-6 py-3 bg-muted rounded-lg opacity-60">
                 <span className="font-medium text-muted-foreground">{client}</span>
