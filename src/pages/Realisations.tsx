@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { TrendingUp, ArrowRight, ExternalLink } from "lucide-react";
+import dynamixImage from "@/assets/portfolio/dynamix-ingenierie.png";
 
 const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier"];
 
@@ -35,7 +36,7 @@ const projects = [
     id: 3,
     name: "Dynamix Ingénierie",
     category: "PME",
-    image: "https://static.wixstatic.com/media/32e815_7c1f3d8c9e2c4e8a9f3b5d7e1c4a2b8f~mv2.png/v1/fill/w_1920,h_900,al_c,q_90,enc_avif,quality_auto/dynamix-hero.png",
+    image: dynamixImage,
     result: "+40% demandes",
     description: "Site vitrine bureau d'études structure + SEO B2B",
     context: "Bureau d'études spécialisé en conception et dimensionnement de structures béton, métal et bois.",
