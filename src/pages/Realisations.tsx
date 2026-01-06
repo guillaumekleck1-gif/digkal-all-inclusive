@@ -24,7 +24,7 @@ const projects = [
     name: "D'Sign Toiture",
     category: "Artisans",
     image: "https://static.wixstatic.com/media/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png/v1/fill/w_1920,h_807,al_c,q_90,enc_avif,quality_auto/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png",
-    result: "+180% demandes devis",
+    result: "+30% demandes devis",
     description: "Site vitrine artisan couvreur + SEO local Bas-Rhin",
     context: "Entreprise artisanale spécialisée en couverture, zinguerie et isolation dans le Bas-Rhin.",
     objective: "Développer la visibilité locale et générer des demandes de devis qualifiées.",
