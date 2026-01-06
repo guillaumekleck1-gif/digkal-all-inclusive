@@ -6,8 +6,9 @@ import { TrendingUp, ArrowRight, ExternalLink } from "lucide-react";
 import dynamixImage from "@/assets/portfolio/dynamix-ingenierie.png";
 import msCreationImage from "@/assets/portfolio/ms-creation.png";
 import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
+import sopremaImage from "@/assets/portfolio/soprema.png";
 
-const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier"];
+const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier", "Grands Comptes"];
 
 const projects = [
   {
@@ -72,6 +73,18 @@ const projects = [
   },
   {
     id: 6,
+    name: "Soprema",
+    category: "Grands Comptes",
+    image: sopremaImage,
+    result: "Animation livrée",
+    description: "Animation motion design pour communication interne",
+    context: "Leader mondial de l'étanchéité et de l'isolation des bâtiments, Soprema cherchait à dynamiser sa communication.",
+    objective: "Créer une animation motion design percutante pour présenter les solutions de l'entreprise.",
+    work: "Conception et réalisation d'une animation motion design professionnelle pour la communication corporate.",
+    url: "https://www.soprema.fr",
+  },
+  {
+    id: 7,
     name: "Menuiserie Dupont",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -82,7 +95,7 @@ const projects = [
     work: "Création d'un site vitrine moderne, optimisation SEO locale, Google Business Profile.",
   },
   {
-    id: 7,
+    id: 8,
     name: "Immo Paris 15",
     category: "Immobilier",
     image: "/placeholder.svg",
@@ -93,7 +106,7 @@ const projects = [
     work: "Site premium, pages SEO par quartier, intégration CRM.",
   },
   {
-    id: 8,
+    id: 9,
     name: "Plombier Express",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -104,7 +117,7 @@ const projects = [
     work: "Site optimisé vitesse, SEO urgence, landing pages par service.",
   },
   {
-    id: 9,
+    id: 10,
     name: "Tech Solutions",
     category: "PME",
     image: "/placeholder.svg",
@@ -115,7 +128,7 @@ const projects = [
     work: "Site corporate, blog avec stratégie de contenu, landing pages.",
   },
   {
-    id: 10,
+    id: 11,
     name: "Bistrot du Coin",
     category: "Restaurants",
     image: "/placeholder.svg",
