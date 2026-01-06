@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Star, Phone, MessageSquare } from "lucide-react";
+import { Check, ArrowRight, Star, Phone, MessageSquare, Calendar, Users, Rocket } from "lucide-react";
 
 const plans = [
   {
@@ -73,6 +73,70 @@ const Offres = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Des formules adaptées à chaque besoin. Choisissez celle qui correspond à vos ambitions.
           </p>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="section-padding bg-background">
+        <div className="container-digkal">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Un processus simple, pensé pour vous
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              On se met dans votre peau, on comprend vos clients, et on vous fait gagner des clients.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Step 1 */}
+            <div className="relative text-center p-8 rounded-2xl bg-card border border-border shadow-card group hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="w-8 h-8 text-primary" />
+              </div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                1
+              </div>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                Un seul RDV
+              </h3>
+              <p className="text-muted-foreground">
+                On échange 15 min pour comprendre votre activité, vos clients, et vos objectifs. C'est tout.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative text-center p-8 rounded-2xl bg-card border border-border shadow-card group hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                2
+              </div>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                On gère tout
+              </h3>
+              <p className="text-muted-foreground">
+                On construit votre site en pensant comme vos futurs clients. Design, contenu, SEO — on s'occupe de tout.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative text-center p-8 rounded-2xl bg-card border border-border shadow-card group hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Rocket className="w-8 h-8 text-primary" />
+              </div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                3
+              </div>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                Vous gagnez des clients
+              </h3>
+              <p className="text-muted-foreground">
+                On optimise ensemble, on suit les résultats, et vous commencez à recevoir des demandes.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
