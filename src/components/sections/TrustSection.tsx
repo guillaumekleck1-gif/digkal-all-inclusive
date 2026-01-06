@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import stradimLogo from "@/assets/clients/stradim.png";
 import sopremaLogo from "@/assets/clients/soprema.png";
 import oreEauLogo from "@/assets/clients/ore-eau.png";
-import imBuerehoftLogo from "@/assets/clients/im-buerehoft.png";
+
 import dynamixLogo from "@/assets/clients/dynamix.png";
 import dsignToitureLogo from "@/assets/clients/dsign-toiture.png";
 
@@ -103,9 +103,6 @@ export function TrustSection() {
             </a>
             <a href="https://www.ore-eau.com" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white rounded-lg hover:shadow-md transition-shadow">
               <img src={oreEauLogo} alt="Oré-Eau Sanitaire" className="h-20 object-contain" />
-            </a>
-            <a href="https://www.buerehoft.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-foreground rounded-lg hover:shadow-md transition-shadow">
-              <img src={imBuerehoftLogo} alt="Im Buerehoft" className="h-8 object-contain" />
             </a>
             <a href="https://dynamix-ingenierie.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <img src={dynamixLogo} alt="Dynamix Ingénierie" className="h-10 object-contain" />
