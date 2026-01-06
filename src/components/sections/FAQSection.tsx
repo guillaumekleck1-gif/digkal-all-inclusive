@@ -7,24 +7,36 @@ import {
 
 const faqs = [
   {
+    question: "Comment créer un site web professionnel ?",
+    answer: "Pour créer un site web professionnel, il faut une stratégie claire, un design adapté à votre métier et une optimisation SEO. Chez Digkal, nous prenons tout en charge : de la conception à la mise en ligne en 72h. Vous n'avez qu'à nous fournir vos contenus, nous gérons le reste.",
+  },
+  {
+    question: "Combien coûte la création de site web ?",
+    answer: "Nos formules de création de site web démarrent à 45€/mois, tout compris : hébergement, maintenance, SSL et support. Pas de frais cachés. Vous payez un abonnement mensuel sans engagement long terme. Un site professionnel accessible à tous les budgets.",
+  },
+  {
+    question: "Quels sont les meilleurs outils pour créer un site internet ?",
+    answer: "Il existe de nombreux outils (WordPress, Wix, etc.) mais le plus important est d'avoir un site optimisé SEO et performant. Nous utilisons les technologies les plus adaptées à votre projet et gérons tout pour vous, sans que vous ayez besoin de connaissances techniques.",
+  },
+  {
+    question: "Comment choisir une agence de création de site web ?",
+    answer: "Choisissez une agence qui comprend vos objectifs, propose un accompagnement SEO et reste disponible après la livraison. Digkal vous accompagne de A à Z : création, référencement, Google Business Profile et optimisation continue.",
+  },
+  {
     question: "Combien de temps pour mettre en ligne mon site ?",
-    answer: "En moyenne, votre site est en ligne en 2 à 4 semaines selon la complexité. Nous travaillons par étapes validées ensemble pour garantir un résultat qui vous correspond.",
+    answer: "Chez Digkal, votre site web est livré en 72 heures. Nous travaillons rapidement sans sacrifier la qualité. Une création de site web rapide et professionnelle pour vous permettre d'être visible rapidement.",
   },
   {
-    question: "Est-ce que vous gérez la page Google Business ?",
-    answer: "Oui, avec nos formules Growth et Performance, nous optimisons votre fiche Google Business Profile : photos, informations, posts réguliers, gestion des avis et FAQ. C'est essentiel pour votre visibilité locale.",
+    question: "Est-ce que vous gérez la page Google Business Profile ?",
+    answer: "Oui, avec nos formules Growth et Performance, nous optimisons votre fiche Google Business Profile : photos, informations, posts réguliers, gestion des avis et FAQ. C'est essentiel pour votre visibilité locale à Paris, Toulouse, Bordeaux et partout en France.",
   },
   {
-    question: "Est-ce que je peux modifier mon site ensuite ?",
-    answer: "Absolument ! Nous vous formons à l'utilisation de votre site et vous pouvez modifier les textes et images facilement. Pour les modifications plus complexes, nous restons disponibles.",
-  },
-  {
-    question: "Comment fonctionne le SEO ?",
-    answer: "Le SEO (référencement naturel) consiste à optimiser votre site pour qu'il apparaisse en haut des résultats Google. Nous travaillons sur la technique, le contenu et la popularité de votre site de manière continue.",
+    question: "Comment fonctionne le référencement SEO ?",
+    answer: "Le SEO (référencement naturel) consiste à optimiser votre site pour qu'il apparaisse en haut des résultats Google. Nous travaillons sur la technique, le contenu et la popularité de votre site de manière continue pour attirer plus de clients.",
   },
   {
     question: "Y a-t-il un engagement sur la durée ?",
-    answer: "Pour la création du site, pas d'engagement après livraison. Pour l'accompagnement SEO mensuel, nous recommandons un engagement de 6 mois minimum pour voir des résultats significatifs, mais nous restons flexibles.",
+    answer: "Pour la création de site web, pas d'engagement après livraison. Pour l'accompagnement SEO mensuel, nous recommandons 6 mois minimum pour des résultats significatifs, mais nous restons flexibles selon vos besoins.",
   },
 ];
 
@@ -34,10 +46,10 @@ export function FAQSection() {
       <div className="container-digkal max-w-3xl">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Questions fréquentes
+            Questions fréquentes sur la création de site web
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tout ce que vous devez savoir avant de démarrer.
+            Tout ce que vous devez savoir sur la création de site web professionnel et le référencement SEO.
           </p>
         </div>
 

@@ -22,12 +22,12 @@ export function HeroSection() {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Un site qui vous apporte des clients.{" "}
-              <span className="text-primary">Nous gérons aussi votre référencement.</span>
+              Création de site web professionnel.{" "}
+              <span className="text-primary">Un site qui vous apporte des clients.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Digkal conçoit votre site web et pilote votre visibilité : SEO, page Google, contenus et optimisations. Vous n'avez rien à gérer.
+              Agence de création de site web en France. Digkal conçoit votre site internet professionnel et pilote votre visibilité : SEO, Google Business Profile, contenus et optimisations. Vous n'avez rien à gérer.
             </p>
 
             {/* Benefits */}
