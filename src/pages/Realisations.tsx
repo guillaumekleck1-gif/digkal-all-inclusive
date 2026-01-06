@@ -8,7 +8,7 @@ import msCreationImage from "@/assets/portfolio/ms-creation.png";
 import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
 import sopremaImage from "@/assets/portfolio/soprema.png";
 
-const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier", "Grands Comptes"];
+const categories = ["Tous", "Artisans", "Restaurants", "PME", "Grands Comptes"];
 
 const projects = [
   {
@@ -82,61 +82,6 @@ const projects = [
     objective: "Créer une animation motion design percutante pour présenter les solutions de l'entreprise.",
     work: "Conception et réalisation d'une animation motion design professionnelle pour la communication corporate.",
     url: "https://www.soprema.fr",
-  },
-  {
-    id: 7,
-    name: "Menuiserie Dupont",
-    category: "Artisans",
-    image: "/placeholder.svg",
-    result: "+120% trafic",
-    description: "Site vitrine complet avec SEO local optimisé",
-    context: "Menuiserie traditionnelle cherchant à développer sa clientèle locale.",
-    objective: "Augmenter la visibilité en ligne et générer des demandes de devis qualifiées.",
-    work: "Création d'un site vitrine moderne, optimisation SEO locale, Google Business Profile.",
-  },
-  {
-    id: 8,
-    name: "Immo Paris 15",
-    category: "Immobilier",
-    image: "/placeholder.svg",
-    result: "+200% leads",
-    description: "Site premium + pages SEO quartiers",
-    context: "Agence immobilière locale cherchant à dominer son secteur.",
-    objective: "Générer des leads qualifiés sur les recherches immobilières locales.",
-    work: "Site premium, pages SEO par quartier, intégration CRM.",
-  },
-  {
-    id: 9,
-    name: "Plombier Express",
-    category: "Artisans",
-    image: "/placeholder.svg",
-    result: "+150% appels",
-    description: "Site urgence + SEO local + Google Ads",
-    context: "Plombier souhaitant capter les urgences dans sa zone.",
-    objective: "Apparaître en premier pour les recherches urgentes.",
-    work: "Site optimisé vitesse, SEO urgence, landing pages par service.",
-  },
-  {
-    id: 10,
-    name: "Tech Solutions",
-    category: "PME",
-    image: "/placeholder.svg",
-    result: "+95% visibilité",
-    description: "Site corporate + blog SEO + inbound",
-    context: "ESN souhaitant développer sa notoriété et générer des leads B2B.",
-    objective: "Positionner l'entreprise comme expert et générer des contacts qualifiés.",
-    work: "Site corporate, blog avec stratégie de contenu, landing pages.",
-  },
-  {
-    id: 11,
-    name: "Bistrot du Coin",
-    category: "Restaurants",
-    image: "/placeholder.svg",
-    result: "+75% clients",
-    description: "Site + click & collect + fidélisation",
-    context: "Bistrot de quartier cherchant à fidéliser sa clientèle.",
-    objective: "Développer la commande en ligne et la fidélisation.",
-    work: "Site avec click & collect, programme fidélité, newsletter.",
   },
 ];
 
@@ -230,6 +175,17 @@ const Realisations = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Et bien plus encore */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-3 bg-muted/50 rounded-2xl px-8 py-6 border border-border">
+              <span className="text-2xl">✨</span>
+              <div className="text-left">
+                <p className="font-display text-xl font-bold text-foreground">Et bien plus encore...</p>
+                <p className="text-muted-foreground text-sm">De nombreux autres projets réalisés pour nos clients satisfaits.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
