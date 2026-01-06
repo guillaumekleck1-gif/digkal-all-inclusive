@@ -21,6 +21,18 @@ const projects = [
   },
   {
     id: 2,
+    name: "D'Sign Toiture",
+    category: "Artisans",
+    image: "https://static.wixstatic.com/media/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png/v1/fill/w_1920,h_807,al_c,q_90,enc_avif,quality_auto/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png",
+    result: "+180% demandes devis",
+    description: "Site vitrine artisan couvreur + SEO local Bas-Rhin",
+    context: "Entreprise artisanale spécialisée en couverture, zinguerie et isolation dans le Bas-Rhin.",
+    objective: "Développer la visibilité locale et générer des demandes de devis qualifiées.",
+    work: "Création d'un site vitrine professionnel, présentation des services (couverture, isolation, zinguerie), optimisation SEO locale et Google Business Profile.",
+    url: "https://www.dsigntoiture.fr",
+  },
+  {
+    id: 3,
     name: "Menuiserie Dupont",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -31,7 +43,7 @@ const projects = [
     work: "Création d'un site vitrine moderne, optimisation SEO locale, Google Business Profile.",
   },
   {
-    id: 3,
+    id: 4,
     name: "Immo Paris 15",
     category: "Immobilier",
     image: "/placeholder.svg",
@@ -42,7 +54,7 @@ const projects = [
     work: "Site premium, pages SEO par quartier, intégration CRM.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Plombier Express",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -53,7 +65,7 @@ const projects = [
     work: "Site optimisé vitesse, SEO urgence, landing pages par service.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Tech Solutions",
     category: "PME",
     image: "/placeholder.svg",
@@ -64,7 +76,7 @@ const projects = [
     work: "Site corporate, blog avec stratégie de contenu, landing pages.",
   },
   {
-    id: 6,
+    id: 7,
     name: "Bistrot du Coin",
     category: "Restaurants",
     image: "/placeholder.svg",
