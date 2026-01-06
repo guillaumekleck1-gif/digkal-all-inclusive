@@ -37,7 +37,7 @@ const projects = [
     name: "Dynamix Ingénierie",
     category: "PME",
     image: dynamixImage,
-    result: "+40% demandes",
+    result: "+10% demandes",
     description: "Site vitrine bureau d'études structure + SEO B2B",
     context: "Bureau d'études spécialisé en conception et dimensionnement de structures béton, métal et bois.",
     objective: "Développer la visibilité auprès des architectes, maîtres d'œuvre et entreprises du BTP.",
