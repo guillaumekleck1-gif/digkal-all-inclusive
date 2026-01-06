@@ -99,7 +99,7 @@ export function TrustSection() {
               <img src={sopremaLogo} alt="Soprema" className="h-8 object-contain" />
             </a>
             <a href="https://www.ore-eau.com" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
-              <img src={oreEauLogo} alt="Oré-Eau Sanitaire" className="h-12 object-contain" />
+              <img src={oreEauLogo} alt="Oré-Eau Sanitaire" className="h-16 object-contain" />
             </a>
             {["Client D", "Client E"].map((client, index) => (
               <div key={index} className="px-6 py-3 bg-muted rounded-lg opacity-60">
