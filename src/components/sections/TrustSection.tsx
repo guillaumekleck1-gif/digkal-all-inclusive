@@ -5,6 +5,7 @@ import sopremaLogo from "@/assets/clients/soprema.png";
 import oreEauLogo from "@/assets/clients/ore-eau.png";
 import imBuerehoftLogo from "@/assets/clients/im-buerehoft.png";
 import dynamixLogo from "@/assets/clients/dynamix.png";
+import dsignToitureLogo from "@/assets/clients/dsign-toiture.png";
 
 const stats = [
   { icon: Users, label: "Sites livrés", value: 50, prefix: "+", suffix: "" },
@@ -108,6 +109,9 @@ export function TrustSection() {
             </a>
             <a href="https://dynamix-ingenierie.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <img src={dynamixLogo} alt="Dynamix Ingénierie" className="h-10 object-contain" />
+            </a>
+            <a href="https://www.dsigntoiture.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <img src={dsignToitureLogo} alt="D'Sign Toiture" className="h-10 object-contain" />
             </a>
           </div>
         </div>
