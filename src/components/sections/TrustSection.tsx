@@ -1,5 +1,6 @@
 import { Star, Users, TrendingUp, Award } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import stradimLogo from "@/assets/clients/stradim.png";
 
 const stats = [
   { icon: Users, label: "Sites livrés", value: 50, prefix: "+", suffix: "" },
@@ -85,12 +86,15 @@ export function TrustSection() {
           ))}
         </div>
 
-        {/* Client Logos Placeholder */}
+        {/* Client Logos */}
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-muted-foreground text-sm mb-6">Ils nous font confiance</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {["Client A", "Client B", "Client C", "Client D", "Client E"].map((client, index) => (
-              <div key={index} className="px-6 py-3 bg-muted rounded-lg">
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            <div className="px-6 py-3 bg-white rounded-lg">
+              <img src={stradimLogo} alt="Stradim" className="h-8 object-contain" />
+            </div>
+            {["Client B", "Client C", "Client D", "Client E"].map((client, index) => (
+              <div key={index} className="px-6 py-3 bg-muted rounded-lg opacity-60">
                 <span className="font-medium text-muted-foreground">{client}</span>
               </div>
             ))}
