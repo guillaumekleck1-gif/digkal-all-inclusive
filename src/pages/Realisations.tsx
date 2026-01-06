@@ -9,6 +9,18 @@ const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier"];
 const projects = [
   {
     id: 1,
+    name: "Im Buerehoft",
+    category: "Restaurants",
+    image: "https://static.wixstatic.com/media/32e815_5129c76e828f42d7865a2071875de869~mv2.jpg/v1/fill/w_1920,h_756,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/32e815_5129c76e828f42d7865a2071875de869~mv2.jpg",
+    result: "+95% réservations",
+    description: "Site vitrine + système de réservation en ligne + carte cadeau",
+    context: "Restaurant alsacien traditionnel proposant tartes flambées, spécialités locales et événements.",
+    objective: "Digitaliser les réservations et augmenter la visibilité du restaurant en Alsace.",
+    work: "Création du site avec menu digital, système de réservation intégré, carte cadeau en ligne et optimisation Google Business Profile.",
+    url: "https://www.buerehoft.fr",
+  },
+  {
+    id: 2,
     name: "Menuiserie Dupont",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -17,17 +29,6 @@ const projects = [
     context: "Menuiserie traditionnelle cherchant à développer sa clientèle locale.",
     objective: "Augmenter la visibilité en ligne et générer des demandes de devis qualifiées.",
     work: "Création d'un site vitrine moderne, optimisation SEO locale, Google Business Profile.",
-  },
-  {
-    id: 2,
-    name: "Restaurant Le Gourmet",
-    category: "Restaurants",
-    image: "/placeholder.svg",
-    result: "+85% réservations",
-    description: "Site + système de réservation + Google Business",
-    context: "Restaurant gastronomique souhaitant digitaliser ses réservations.",
-    objective: "Faciliter les réservations et améliorer la présence sur Google.",
-    work: "Site avec réservation en ligne, menu digital, optimisation Google Maps.",
   },
   {
     id: 3,
@@ -75,9 +76,22 @@ const projects = [
   },
 ];
 
+type Project = {
+  id: number;
+  name: string;
+  category: string;
+  image: string;
+  result: string;
+  description: string;
+  context: string;
+  objective: string;
+  work: string;
+  url?: string;
+};
+
 const Realisations = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = activeCategory === "Tous"
     ? projects
@@ -190,7 +204,15 @@ const Realisations = () => {
               </div>
 
               <div className="flex gap-4 mt-8">
-                <Button variant="hero" asChild>
+                {selectedProject.url && (
+                  <Button variant="hero" asChild>
+                    <a href={selectedProject.url} target="_blank" rel="noopener noreferrer">
+                      Voir le site
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                )}
+                <Button variant={selectedProject.url ? "outline" : "hero"} asChild>
                   <Link to="/contact">
                     Créer mon site
                     <ArrowRight className="w-4 h-4" />
