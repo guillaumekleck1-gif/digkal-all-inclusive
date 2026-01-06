@@ -12,7 +12,7 @@ const projects = [
     name: "Im Buerehoft",
     category: "Restaurants",
     image: "https://static.wixstatic.com/media/32e815_5129c76e828f42d7865a2071875de869~mv2.jpg/v1/fill/w_1920,h_756,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/32e815_5129c76e828f42d7865a2071875de869~mv2.jpg",
-    result: "+95% réservations",
+    result: "+25% réservations",
     description: "Site vitrine + système de réservation en ligne + carte cadeau",
     context: "Restaurant alsacien traditionnel proposant tartes flambées, spécialités locales et événements.",
     objective: "Digitaliser les réservations et augmenter la visibilité du restaurant en Alsace.",
