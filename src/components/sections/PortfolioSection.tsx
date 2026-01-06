@@ -2,57 +2,61 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { useState } from "react";
+import dynamixImage from "@/assets/portfolio/dynamix-ingenierie.png";
+import msCreationImage from "@/assets/portfolio/ms-creation.png";
+import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
+import sopremaImage from "@/assets/portfolio/soprema.png";
 
-const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier"];
+const categories = ["Tous", "Artisans", "Restaurants", "PME", "Grands Comptes"];
 
 const projects = [
   {
     id: 1,
-    name: "Menuiserie Dupont",
-    category: "Artisans",
-    image: "/placeholder.svg",
-    result: "+120% trafic",
-    description: "Site vitrine + SEO local",
+    name: "Im Buerehoft",
+    category: "Restaurants",
+    image: "https://static.wixstatic.com/media/32e815_5129c76e828f42d7865a2071875de869~mv2.jpg/v1/fill/w_1920,h_756,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/32e815_5129c76e828f42d7865a2071875de869~mv2.jpg",
+    result: "+25% réservations",
+    description: "Site vitrine + réservation en ligne + carte cadeau",
   },
   {
     id: 2,
-    name: "Restaurant Le Gourmet",
-    category: "Restaurants",
-    image: "/placeholder.svg",
-    result: "+85% réservations",
-    description: "Site + Google Business Profile",
+    name: "D'Sign Toiture",
+    category: "Artisans",
+    image: "https://static.wixstatic.com/media/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png/v1/fill/w_1920,h_807,al_c,q_90,enc_avif,quality_auto/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png",
+    result: "+30% demandes devis",
+    description: "Site vitrine artisan couvreur + SEO local",
   },
   {
     id: 3,
-    name: "Immo Paris 15",
-    category: "Immobilier",
-    image: "/placeholder.svg",
-    result: "+200% leads",
-    description: "Site premium + pages SEO",
+    name: "Dynamix Ingénierie",
+    category: "PME",
+    image: dynamixImage,
+    result: "+10% demandes",
+    description: "Site vitrine bureau d'études structure + SEO B2B",
   },
   {
     id: 4,
-    name: "Plombier Express",
+    name: "MS Création",
     category: "Artisans",
-    image: "/placeholder.svg",
-    result: "+150% appels",
-    description: "Site + SEO urgence",
+    image: msCreationImage,
+    result: "+35% demandes",
+    description: "Site vitrine artisan plombier + rénovation",
   },
   {
     id: 5,
-    name: "Tech Solutions",
+    name: "Natural Paysage",
     category: "PME",
-    image: "/placeholder.svg",
-    result: "+95% visibilité",
-    description: "Site corporate + blog SEO",
+    image: naturalPaysageImage,
+    result: "+45% demandes",
+    description: "Site vitrine paysagiste + SEO local",
   },
   {
     id: 6,
-    name: "Bistrot du Coin",
-    category: "Restaurants",
-    image: "/placeholder.svg",
-    result: "+75% clients",
-    description: "Site + réservation en ligne",
+    name: "Soprema",
+    category: "Grands Comptes",
+    image: sopremaImage,
+    result: "Animation livrée",
+    description: "Animation motion design corporate",
   },
 ];
 
