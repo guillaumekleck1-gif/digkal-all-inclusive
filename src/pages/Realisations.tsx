@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { TrendingUp, ArrowRight, ExternalLink } from "lucide-react";
 import dynamixImage from "@/assets/portfolio/dynamix-ingenierie.png";
+import msCreationImage from "@/assets/portfolio/ms-creation.png";
 
 const categories = ["Tous", "Artisans", "Restaurants", "PME", "Immobilier"];
 
@@ -46,6 +47,18 @@ const projects = [
   },
   {
     id: 4,
+    name: "MS Création",
+    category: "Artisans",
+    image: msCreationImage,
+    result: "+35% demandes",
+    description: "Site vitrine artisan plombier + rénovation intérieure",
+    context: "Artisan spécialisé en plomberie et rénovation d'intérieur, proposant des services de conception à la réalisation.",
+    objective: "Développer la visibilité locale et présenter les réalisations pour convaincre les prospects.",
+    work: "Création d'un site vitrine élégant présentant les services (plomberie, rénovation cuisine/salle de bain), galerie de réalisations et formulaire de demande de devis.",
+    url: "https://www.ms-creation.fr",
+  },
+  {
+    id: 5,
     name: "Menuiserie Dupont",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -56,7 +69,7 @@ const projects = [
     work: "Création d'un site vitrine moderne, optimisation SEO locale, Google Business Profile.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Immo Paris 15",
     category: "Immobilier",
     image: "/placeholder.svg",
@@ -67,7 +80,7 @@ const projects = [
     work: "Site premium, pages SEO par quartier, intégration CRM.",
   },
   {
-    id: 6,
+    id: 7,
     name: "Plombier Express",
     category: "Artisans",
     image: "/placeholder.svg",
@@ -78,7 +91,7 @@ const projects = [
     work: "Site optimisé vitesse, SEO urgence, landing pages par service.",
   },
   {
-    id: 7,
+    id: 8,
     name: "Tech Solutions",
     category: "PME",
     image: "/placeholder.svg",
@@ -89,7 +102,7 @@ const projects = [
     work: "Site corporate, blog avec stratégie de contenu, landing pages.",
   },
   {
-    id: 8,
+    id: 9,
     name: "Bistrot du Coin",
     category: "Restaurants",
     image: "/placeholder.svg",
