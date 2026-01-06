@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import stradimLogo from "@/assets/clients/stradim.png";
 import sopremaLogo from "@/assets/clients/soprema.png";
 import oreEauLogo from "@/assets/clients/ore-eau.png";
+import imBuerehoftLogo from "@/assets/clients/im-buerehoft.png";
 
 const stats = [
   { icon: Users, label: "Sites livrés", value: 50, prefix: "+", suffix: "" },
@@ -101,7 +102,10 @@ export function TrustSection() {
             <a href="https://www.ore-eau.com" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-white rounded-lg hover:shadow-md transition-shadow">
               <img src={oreEauLogo} alt="Oré-Eau Sanitaire" className="h-20 object-contain" />
             </a>
-            {["Client D", "Client E"].map((client, index) => (
+            <a href="https://www.buerehoft.fr" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-foreground rounded-lg hover:shadow-md transition-shadow">
+              <img src={imBuerehoftLogo} alt="Im Buerehoft" className="h-8 object-contain" />
+            </a>
+            {["Client E"].map((client, index) => (
               <div key={index} className="px-6 py-3 bg-muted rounded-lg opacity-60">
                 <span className="font-medium text-muted-foreground">{client}</span>
               </div>
