@@ -32,24 +32,51 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Demande envoyée !",
-      description: "Nous vous recontacterons dans les 24h.",
-    });
-    
-    setFormData({
-      name: "",
-      company: "",
-      phone: "",
-      email: "",
-      website: "",
-      objective: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+    try {
+      const response = await fetch("https://n8n.srv1188133.hstgr.cloud/webhook/f05dd507-8e11-4564-8e4f-7ace3c8b08cc", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          phone: formData.phone,
+          email: formData.email,
+          website: formData.website,
+          objective: formData.objective,
+          message: formData.message,
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi");
+      }
+
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous vous recontacterons dans les 24h.",
+      });
+      
+      setFormData({
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        website: "",
+        objective: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
