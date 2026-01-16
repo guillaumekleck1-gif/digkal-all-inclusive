@@ -48,7 +48,7 @@ const projects = [
     name: "ETS Mike Paysagiste",
     category: "Artisans",
     image: etsMikeImage,
-    result: "+40% demandes",
+    result: "Nouveaux Site",
     description: "Site vitrine paysagiste + SEO local Alsace",
   },
   {
