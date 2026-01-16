@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { Phone, Mail, Clock, MapPin, Send, Calendar, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const objectives = [
   "Créer un nouveau site",
@@ -33,12 +34,8 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://n8n.srv1188133.hstgr.cloud/webhook/f05dd507-8e11-4564-8e4f-7ace3c8b08cc", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const { data, error } = await supabase.functions.invoke('send-to-n8n', {
+        body: {
           name: formData.name,
           company: formData.company,
           phone: formData.phone,
@@ -46,12 +43,11 @@ const Contact = () => {
           website: formData.website,
           objective: formData.objective,
           message: formData.message,
-          submittedAt: new Date().toISOString(),
-        }),
+        },
       });
 
-      if (!response.ok) {
-        throw new Error("Erreur lors de l'envoi");
+      if (error) {
+        throw error;
       }
 
       toast({
