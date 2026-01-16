@@ -7,6 +7,7 @@ import dynamixImage from "@/assets/portfolio/dynamix-ingenierie.png";
 import msCreationImage from "@/assets/portfolio/ms-creation.png";
 import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
 import sopremaImage from "@/assets/portfolio/soprema.png";
+import etsMikeImage from "@/assets/portfolio/ets-mike-paysagiste.png";
 
 const categories = ["Tous", "Artisans", "Restaurants", "PME", "Grands Comptes"];
 
@@ -58,6 +59,18 @@ const projects = [
     objective: "Développer la visibilité locale et présenter les réalisations pour convaincre les prospects.",
     work: "Création d'un site vitrine élégant présentant les services (plomberie, rénovation cuisine/salle de bain), galerie de réalisations et formulaire de demande de devis.",
     url: "https://www.ms-creation.fr",
+  },
+  {
+    id: 7,
+    name: "ETS Mike Paysagiste",
+    category: "Artisans",
+    image: etsMikeImage,
+    result: "+40% demandes",
+    description: "Site vitrine paysagiste + SEO local Alsace",
+    context: "Jardinier paysagiste en Alsace avec plus de 15 ans d'expérience dans l'entretien des jardins et espaces verts.",
+    objective: "Développer la visibilité locale et générer des demandes de devis qualifiées dans le Bas-Rhin.",
+    work: "Création d'un site vitrine professionnel présentant les services (entretien jardins, aménagement paysager), optimisation SEO locale et Google Business Profile.",
+    url: "https://www.etsmikepaysagiste.fr",
   },
   {
     id: 5,

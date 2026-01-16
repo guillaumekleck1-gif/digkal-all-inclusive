@@ -6,6 +6,7 @@ import dynamixImage from "@/assets/portfolio/dynamix-ingenierie.png";
 import msCreationImage from "@/assets/portfolio/ms-creation.png";
 import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
 import sopremaImage from "@/assets/portfolio/soprema.png";
+import etsMikeImage from "@/assets/portfolio/ets-mike-paysagiste.png";
 
 const categories = ["Tous", "Artisans", "Restaurants", "PME", "Grands Comptes"];
 
@@ -41,6 +42,14 @@ const projects = [
     image: msCreationImage,
     result: "+35% demandes",
     description: "Site vitrine artisan plombier + rénovation",
+  },
+  {
+    id: 7,
+    name: "ETS Mike Paysagiste",
+    category: "Artisans",
+    image: etsMikeImage,
+    result: "+40% demandes",
+    description: "Site vitrine paysagiste + SEO local Alsace",
   },
   {
     id: 5,
