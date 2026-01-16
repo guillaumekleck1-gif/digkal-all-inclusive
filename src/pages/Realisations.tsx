@@ -65,7 +65,7 @@ const projects = [
     name: "ETS Mike Paysagiste",
     category: "Artisans",
     image: etsMikeImage,
-    result: "+40% demandes",
+    result: "Nouveaux Site",
     description: "Site vitrine paysagiste + SEO local Alsace",
     context: "Jardinier paysagiste en Alsace avec plus de 15 ans d'expérience dans l'entretien des jardins et espaces verts.",
     objective: "Développer la visibilité locale et générer des demandes de devis qualifiées dans le Bas-Rhin.",
