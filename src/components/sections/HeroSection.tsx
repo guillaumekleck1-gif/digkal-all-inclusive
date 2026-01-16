@@ -16,8 +16,8 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-up">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-              <Zap className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-5 py-3 rounded-full text-base md:text-lg font-semibold">
+              <Zap className="w-5 h-5" />
               Votre site web dès 45€/mois
             </div>
 
