@@ -15,6 +15,7 @@ import SEOReferencement from "./pages/services/SEOReferencement";
 import GoogleBusinessProfile from "./pages/services/GoogleBusinessProfile";
 import CreationContenu from "./pages/services/CreationContenu";
 import OptimisationContinue from "./pages/services/OptimisationContinue";
+import MentionsLegales from "./pages/MentionsLegales";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/services/google-business-profile" element={<GoogleBusinessProfile />} />
           <Route path="/services/creation-contenu" element={<CreationContenu />} />
           <Route path="/services/optimisation-continue" element={<OptimisationContinue />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
