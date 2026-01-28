@@ -100,7 +100,7 @@ const projects = [
   {
     id: 8,
     name: "Rainbow France Horn",
-    category: "PME",
+    category: "Grands Comptes",
     image: rainbowImage,
     result: "+30% conversion",
     description: "Landing page optimisée pour la conversion",
