@@ -266,7 +266,7 @@ const Contact = () => {
                   Préférez planifier un appel ? Choisissez un créneau qui vous convient.
                 </p>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="#" target="_blank">
+                  <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0" target="_blank" rel="noopener noreferrer">
                     <Calendar className="w-5 h-5" />
                     Voir les disponibilités
                   </a>
