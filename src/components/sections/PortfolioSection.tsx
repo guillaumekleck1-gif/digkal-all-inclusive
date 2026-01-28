@@ -67,6 +67,14 @@ const projects = [
     result: "Animation livrée",
     description: "Animation motion design corporate",
   },
+  {
+    id: 8,
+    name: "Rainbow France Horn",
+    category: "PME",
+    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&h=600&fit=crop",
+    result: "+30% conversion",
+    description: "Landing page optimisée pour la conversion",
+  },
 ];
 
 export function PortfolioSection() {

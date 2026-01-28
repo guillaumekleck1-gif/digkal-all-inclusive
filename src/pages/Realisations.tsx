@@ -96,6 +96,18 @@ const projects = [
     work: "Conception et réalisation d'une animation motion design professionnelle pour la communication corporate.",
     url: "https://www.soprema.fr",
   },
+  {
+    id: 8,
+    name: "Rainbow France Horn",
+    category: "PME",
+    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&h=600&fit=crop",
+    result: "+30% conversion",
+    description: "Landing page optimisée pour la conversion",
+    context: "Entreprise spécialisée dans son domaine cherchant à augmenter ses conversions en ligne.",
+    objective: "Créer une landing page performante pour maximiser le taux de conversion des visiteurs.",
+    work: "Conception et développement d'une landing page optimisée avec focus sur les éléments de conversion, appels à l'action stratégiques et design persuasif.",
+    url: "https://www.rainbow-france-horn.fr",
+  },
 ];
 
 type Project = {
