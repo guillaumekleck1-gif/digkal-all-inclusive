@@ -16,8 +16,6 @@ const objectives = [
   "Autre",
 ];
 
-const CALENDAR_BOOKING_URL = "https://calendar.app.google/pZ7zrYiisDhupTgw7";
-
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -31,27 +29,12 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleOpenCalendar = () => {
-    const url = CALENDAR_BOOKING_URL;
-
-    // 1) Try opening a new tab (best UX on the published site)
-    const opened = window.open(url, "_blank", "noopener,noreferrer");
-    if (opened) return;
-
-    // 2) Fallback for preview environments that block popups: navigate the top window
-    try {
-      window.top?.location.assign(url);
-    } catch {
-      window.location.assign(url);
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const { data, error } = await supabase.functions.invoke('send-to-n8n', {
+      const { data, error } = await supabase.functions.invoke("send-to-n8n", {
         body: {
           name: formData.name,
           company: formData.company,
@@ -71,7 +54,7 @@ const Contact = () => {
         title: "Demande envoyée !",
         description: "Nous vous recontacterons dans les 24h.",
       });
-      
+
       setFormData({
         name: "",
         company: "",
@@ -112,11 +95,12 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <form onSubmit={handleSubmit} className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-card">
-                <h2 className="font-display text-2xl font-bold text-foreground mb-8">
-                  Demander un devis gratuit
-                </h2>
-                
+              <form
+                onSubmit={handleSubmit}
+                className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-card"
+              >
+                <h2 className="font-display text-2xl font-bold text-foreground mb-8">Demander un devis gratuit</h2>
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Nom *</Label>
@@ -250,7 +234,10 @@ const Contact = () => {
                 <h3 className="font-display font-bold text-foreground text-lg mb-6">Contact direct</h3>
                 <ul className="space-y-4">
                   <li>
-                    <a href="tel:0678015732" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors">
+                    <a
+                      href="tel:0678015732"
+                      className="flex items-center gap-4 text-foreground hover:text-primary transition-colors"
+                    >
                       <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                         <Phone className="w-5 h-5 text-primary" />
                       </div>
@@ -258,7 +245,10 @@ const Contact = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:contact@digkal.fr" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors">
+                    <a
+                      href="mailto:contact@digkal.fr"
+                      className="flex items-center gap-4 text-foreground hover:text-primary transition-colors"
+                    >
                       <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                         <Mail className="w-5 h-5 text-primary" />
                       </div>
@@ -282,14 +272,11 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Préférez planifier un appel ? Choisissez un créneau qui vous convient.
                 </p>
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  type="button"
-                  onClick={handleOpenCalendar}
-                >
-                  <Calendar className="w-5 h-5" />
-                  Voir les disponibilités
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="https://calendar.app.google/pZ7zrYiisDhupTgw7" target="_blank" rel="noopener noreferrer">
+                    <Calendar className="w-5 h-5" />
+                    Voir les disponibilités
+                  </a>
                 </Button>
               </div>
 
