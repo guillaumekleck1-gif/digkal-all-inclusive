@@ -7,7 +7,7 @@ import msCreationImage from "@/assets/portfolio/ms-creation.png";
 import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
 import sopremaImage from "@/assets/portfolio/soprema.png";
 import etsMikeImage from "@/assets/portfolio/ets-mike-paysagiste.png";
-
+import rainbowImage from "@/assets/portfolio/rainbow-france-horn.png";
 const categories = ["Tous", "Artisans", "Restaurants", "PME", "Grands Comptes"];
 
 const projects = [
@@ -71,7 +71,7 @@ const projects = [
     id: 8,
     name: "Rainbow France Horn",
     category: "PME",
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&h=600&fit=crop",
+    image: rainbowImage,
     result: "+30% conversion",
     description: "Landing page optimisée pour la conversion",
   },
