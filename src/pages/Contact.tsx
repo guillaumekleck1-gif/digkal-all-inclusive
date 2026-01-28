@@ -16,6 +16,8 @@ const objectives = [
   "Autre",
 ];
 
+const CALENDAR_BOOKING_URL = "https://calendar.app.google/pZ7zrYiisDhupTgw7";
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -28,6 +30,21 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleOpenCalendar = () => {
+    const url = CALENDAR_BOOKING_URL;
+
+    // 1) Try opening a new tab (best UX on the published site)
+    const opened = window.open(url, "_blank", "noopener,noreferrer");
+    if (opened) return;
+
+    // 2) Fallback for preview environments that block popups: navigate the top window
+    try {
+      window.top?.location.assign(url);
+    } catch {
+      window.location.assign(url);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -265,15 +282,15 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Préférez planifier un appel ? Choisissez un créneau qui vous convient.
                 </p>
-                <a 
-                  href="https://calendar.app.google/pZ7zrYiisDhupTgw7" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full h-11 px-8 rounded-md border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground transition-colors font-medium"
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  type="button"
+                  onClick={handleOpenCalendar}
                 >
                   <Calendar className="w-5 h-5" />
                   Voir les disponibilités
-                </a>
+                </Button>
               </div>
 
               {/* Trust badges */}
