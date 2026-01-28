@@ -272,12 +272,15 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Préférez planifier un appel ? Choisissez un créneau qui vous convient.
                 </p>
-                <Button variant="outline" className="w-full" asChild>
-                  <a href="https://calendar.app.google/FF8ivAbG4wYG94iw6" target="_blank" rel="noopener noreferrer">
-                    <Calendar className="w-5 h-5" />
-                    Voir les disponibilités
-                  </a>
-                </Button>
+                <a
+                  href="https://calendar.app.google/FF8ivAbG4wYG94iw6"
+                  target="_top"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full"
+                >
+                  <Calendar className="w-5 h-5" />
+                  Voir les disponibilités
+                </a>
               </div>
 
               {/* Trust badges */}
