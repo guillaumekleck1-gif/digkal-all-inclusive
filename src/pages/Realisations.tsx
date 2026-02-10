@@ -109,6 +109,18 @@ const projects = [
     work: "Conception et développement d'une landing page optimisée avec focus sur les éléments de conversion, appels à l'action stratégiques et design persuasif.",
     url: "https://www.rainbow-france-horn.fr",
   },
+  {
+    id: 9,
+    name: "AKPro Plâtrerie",
+    category: "Artisans",
+    image: "https://www.xn--akpro-pltrerie-bkb.fr/wp-content/uploads/2024/01/akpro-platrerie-hero.jpg",
+    result: "Nouveau Site",
+    description: "Site vitrine artisan plâtrier + SEO local",
+    context: "Artisan plâtrier proposant des services de plâtrerie traditionnelle et moderne.",
+    objective: "Développer la visibilité locale et générer des demandes de devis qualifiées.",
+    work: "Création d'un site vitrine professionnel présentant les services de plâtrerie, optimisation SEO locale et Google Business Profile.",
+    url: "https://www.akpro-plâtrerie.fr",
+  },
 ];
 
 type Project = {
