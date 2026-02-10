@@ -9,7 +9,10 @@ import {
   Palette, 
   Code,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  BadgeEuro,
+  Gift,
+  FileText
 } from "lucide-react";
 
 const features = [
@@ -150,7 +153,100 @@ export default function CreationSiteWeb() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Aide État Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/10 relative overflow-hidden">
+        <div className="container-digkal">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+                <Gift className="w-4 h-4" />
+                Aide de l'État
+              </span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+                Votre site web <span className="text-primary">remboursé jusqu'à 100%</span> par l'État
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                L'État français et les collectivités territoriales proposent des aides financières pour accompagner la transition numérique des TPE et PME. La création ou la refonte de votre site web peut être entièrement prise en charge.
+              </p>
+              <p className="text-muted-foreground mb-8">
+                En tant qu'artisan, commerçant ou profession libérale, vous pouvez bénéficier de subventions couvrant tout ou partie de votre projet digital : site vitrine, e-commerce, référencement, cybersécurité…
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground">Grand Est Transformation Digitale</p>
+                    <p className="text-sm text-muted-foreground">Diagnostic gratuit + chèque jusqu'à 3 000 € pour votre projet digital</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground">Dispositif Become (Eurométropole Strasbourg)</p>
+                    <p className="text-sm text-muted-foreground">50% des dépenses remboursées, plafonné à 1 500 €</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground">Coup de pouce numérique (CMA Alsace)</p>
+                    <p className="text-sm text-muted-foreground">Accompagnement jusqu'à 3 000 € pour les PME</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-3xl p-8 lg:p-10 shadow-lg">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <BadgeEuro className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-display font-bold text-foreground">Comment en bénéficier ?</h3>
+                  <p className="text-sm text-muted-foreground">On s'occupe de tout pour vous</p>
+                </div>
+              </div>
+
+              <div className="space-y-6 mb-8">
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+                  <div>
+                    <p className="font-semibold text-foreground">Vérification d'éligibilité</p>
+                    <p className="text-sm text-muted-foreground">Nous vérifions gratuitement si votre entreprise peut bénéficier des aides disponibles.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+                  <div>
+                    <p className="font-semibold text-foreground">Constitution du dossier</p>
+                    <p className="text-sm text-muted-foreground">Nous préparons et déposons votre dossier de demande de subvention.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+                  <div>
+                    <p className="font-semibold text-foreground">Création de votre site</p>
+                    <p className="text-sm text-muted-foreground">Votre site est créé pendant le traitement du dossier. Vous ne payez que le reste à charge (parfois 0 €).</p>
+                  </div>
+                </div>
+              </div>
+
+              <Button asChild variant="hero" size="lg" className="w-full">
+                <Link to="/contact">
+                  <FileText className="w-5 h-5" />
+                  Vérifier mon éligibilité gratuitement
+                </Link>
+              </Button>
+              <p className="text-xs text-muted-foreground text-center mt-3">
+                Sans engagement · Réponse en 24h
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <section className="py-20">
         <div className="container-digkal text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
