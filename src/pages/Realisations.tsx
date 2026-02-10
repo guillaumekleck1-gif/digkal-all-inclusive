@@ -9,6 +9,7 @@ import naturalPaysageImage from "@/assets/portfolio/natural-paysage.png";
 import sopremaImage from "@/assets/portfolio/soprema.png";
 import etsMikeImage from "@/assets/portfolio/ets-mike-paysagiste.png";
 import rainbowImage from "@/assets/portfolio/rainbow-france-horn.png";
+import akproImage from "@/assets/portfolio/akpro-platrerie.png";
 
 const categories = ["Tous", "Artisans", "Restaurants", "PME", "Grands Comptes"];
 
@@ -113,7 +114,7 @@ const projects = [
     id: 9,
     name: "AKPro Plâtrerie",
     category: "Artisans",
-    image: "https://www.xn--akpro-pltrerie-bkb.fr/wp-content/uploads/2024/01/akpro-platrerie-hero.jpg",
+    image: akproImage,
     result: "Nouveau Site",
     description: "Site vitrine artisan plâtrier + SEO local",
     context: "Artisan plâtrier proposant des services de plâtrerie traditionnelle et moderne.",
