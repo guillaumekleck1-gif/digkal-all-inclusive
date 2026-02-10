@@ -1,3 +1,4 @@
+import React from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -58,6 +59,21 @@ const benefits = [
 ];
 
 export default function CreationSiteWeb() {
+  React.useEffect(() => {
+    document.title = "Création de site web professionnel | Remboursé jusqu'à 100% par l'État – Digkal";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const content = "Faites créer votre site web professionnel et bénéficiez d'aides de l'État pouvant rembourser jusqu'à 100% de votre projet. TPE, PME, artisans : vérifiez votre éligibilité gratuitement.";
+    if (metaDesc) {
+      metaDesc.setAttribute("content", content);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = content;
+      document.head.appendChild(meta);
+    }
+    return () => { document.title = "Digkal"; };
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
