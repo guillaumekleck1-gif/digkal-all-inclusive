@@ -75,6 +75,14 @@ const projects = [
     result: "+30% conversion",
     description: "Landing page optimisée pour la conversion",
   },
+  {
+    id: 9,
+    name: "AKPro Plâtrerie",
+    category: "Artisans",
+    image: "https://www.xn--akpro-pltrerie-bkb.fr/wp-content/uploads/2024/01/akpro-platrerie-hero.jpg",
+    result: "Nouveau Site",
+    description: "Site vitrine artisan plâtrier + SEO local",
+  },
 ];
 
 export function PortfolioSection() {
