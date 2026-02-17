@@ -156,6 +156,8 @@ const APropos = () => {
               style={{ border: 0 }}
               loading="lazy"
               title="Localisation Digkal"
+              allow="geolocation"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
