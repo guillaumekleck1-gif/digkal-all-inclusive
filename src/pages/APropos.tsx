@@ -142,6 +142,25 @@ const APropos = () => {
         </div>
       </section>
 
+      {/* Localisation */}
+      <section className="section-padding bg-background">
+        <div className="container-digkal">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
+            Nous trouver
+          </h2>
+          <div className="rounded-3xl overflow-hidden border border-border shadow-card" style={{ height: "450px" }}>
+            <iframe
+              src="https://storage.googleapis.com/maps-solutions-4fws7l1aug/locator-plus/yo4w/locator-plus.html"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              title="Localisation Digkal"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding bg-digkal-dark text-primary-foreground">
         <div className="container-digkal text-center">
