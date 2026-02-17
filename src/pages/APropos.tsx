@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import bureauDigkal from "@/assets/bureau-digkal.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Target, Lightbulb, TrendingUp, Users, ArrowRight, CheckCircle } from "lucide-react";
@@ -57,14 +58,8 @@ const APropos = () => {
               </Button>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-digkal-accent/10 rounded-3xl flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <span className="text-primary-foreground font-bold text-5xl">D</span>
-                  </div>
-                  <p className="font-display text-2xl font-bold text-foreground">Équipe Digkal</p>
-                  <p className="text-muted-foreground">Experts web & SEO</p>
-                </div>
+              <div className="aspect-square rounded-3xl overflow-hidden">
+                <img src={bureauDigkal} alt="Bureau Digkal Web - Agence Strasbourg" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
