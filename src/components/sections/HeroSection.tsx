@@ -26,7 +26,7 @@ export function HeroSection() {
       {/* Spline 3D Full Background */}
       <div className="absolute inset-0 z-0">
         <spline-viewer
-          url="https://prod.spline.design/fFZA6RAQ39ts6DIc/scene.splinecode"
+          url="https://prod.spline.design/ij33TZxleDK1xQaV/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
