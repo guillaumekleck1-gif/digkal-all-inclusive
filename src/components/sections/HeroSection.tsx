@@ -1,15 +1,32 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Globe, Search, MapPin, ArrowRight, Sparkles, Zap, Shield } from "lucide-react";
-import heroMockup from "@/assets/hero-mockup.png";
+import { Globe, Search, MapPin, ArrowRight, Zap, Shield } from "lucide-react";
+import { useEffect } from "react";
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'spline-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { url?: string }, HTMLElement>;
+    }
+  }
+}
 
 export function HeroSection() {
+  useEffect(() => {
+    if (!document.querySelector('script[src*="spline-viewer"]')) {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = 'https://unpkg.com/@splinetool/viewer@1.12.58/build/spline-viewer.js';
+      document.head.appendChild(script);
+    }
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-digkal-light to-background">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-digkal-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container-digkal relative z-10 py-16 md:py-24 lg:py-32">
@@ -39,8 +56,8 @@ export function HeroSection() {
                 <span className="text-foreground font-medium">Création du site en 72h + mise en ligne</span>
               </li>
               <li className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-digkal-accent/10 flex items-center justify-center">
-                  <Search className="w-5 h-5 text-digkal-accent" />
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <Search className="w-5 h-5 text-accent-foreground" />
                 </div>
                 <span className="text-foreground font-medium">SEO local + Google Business Profile géré</span>
               </li>
@@ -68,15 +85,16 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Mockup */}
+          {/* Right Content - Spline 3D */}
           <div className="relative animate-fade-up stagger-2">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-digkal-accent/20 rounded-3xl blur-2xl transform scale-95" />
-              <img
-                src={heroMockup}
-                alt="Dashboard SEO et site web Digkal"
-                className="relative z-10 w-full h-auto rounded-2xl shadow-2xl animate-float"
-              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl transform scale-95" />
+              <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl" style={{ height: '480px' }}>
+                <spline-viewer
+                  url="undefined"
+                  style={{ width: '100%', height: '100%' }}
+                />
+              </div>
             </div>
 
             {/* Floating badges */}
@@ -109,3 +127,4 @@ export function HeroSection() {
     </section>
   );
 }
+
