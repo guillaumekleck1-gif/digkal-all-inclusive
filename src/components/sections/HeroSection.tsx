@@ -91,7 +91,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl transform scale-95" />
               <div className="relative z-10 w-full rounded-2xl overflow-hidden shadow-2xl" style={{ height: '480px' }}>
                 <spline-viewer
-                  url="undefined"
+                  url="https://prod.spline.design/ij33TZxleDK1xQaV/scene.splinecode"
                   style={{ width: '100%', height: '100%' }}
                 />
               </div>
