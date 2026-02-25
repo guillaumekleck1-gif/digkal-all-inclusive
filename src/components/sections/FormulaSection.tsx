@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Globe, Search, MapPin, ArrowRight } from "lucide-react";
@@ -8,7 +9,8 @@ const services = [
     title: "Création du site web",
     description: "Design professionnel, pages optimisées, mobile-first, vitesse, sécurité et tracking intégré.",
     color: "primary",
-    link: "/services/creation-site-web",
+    link: "https://www.digkal-site-web.fr",
+    external: true,
   },
   {
     icon: Search,
@@ -41,31 +43,39 @@ export function FormulaSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={service.link}
-              className="group bg-card rounded-3xl p-8 border border-border shadow-card card-hover block"
-            >
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
-                service.color === "accent" 
-                  ? "bg-digkal-accent/10" 
-                  : "bg-primary/10"
-              }`}>
-                <service.icon className={`w-8 h-8 ${
+          {services.map((service, index) => {
+            const CardWrapper = service.external
+              ? ({ children, className }: { children: React.ReactNode; className: string }) => (
+                  <a href={service.link} target="_blank" rel="noopener noreferrer" className={className}>{children}</a>
+                )
+              : ({ children, className }: { children: React.ReactNode; className: string }) => (
+                  <Link to={service.link} className={className}>{children}</Link>
+                );
+            return (
+              <CardWrapper
+                key={index}
+                className="group bg-card rounded-3xl p-8 border border-border shadow-card card-hover block"
+              >
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
                   service.color === "accent" 
-                    ? "text-digkal-accent" 
-                    : "text-primary"
-                }`} />
-              </div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </Link>
-          ))}
+                    ? "bg-digkal-accent/10" 
+                    : "bg-primary/10"
+                }`}>
+                  <service.icon className={`w-8 h-8 ${
+                    service.color === "accent" 
+                      ? "text-digkal-accent" 
+                      : "text-primary"
+                  }`} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </CardWrapper>
+            );
+          })}
         </div>
 
         <div className="text-center mt-12">

@@ -10,7 +10,7 @@ const navLinks = [
     label: "Services", 
     href: "#",
     submenu: [
-      { label: "Création de site web", href: "/services/creation-site-web" },
+      { label: "Création de site web", href: "https://www.digkal-site-web.fr", external: true },
       { label: "SEO & Référencement", href: "/services/seo-referencement" },
       { label: "Google Business Profile", href: "/services/google-business-profile" },
       { label: "Création de contenu", href: "/services/creation-contenu" },
@@ -72,17 +72,29 @@ export function Header() {
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="bg-background border border-border rounded-xl shadow-lg py-2 min-w-[220px]">
                       {link.submenu.map((sublink) => (
-                        <Link
-                          key={sublink.href}
-                          to={sublink.href}
-                          className={`block px-4 py-2 text-sm transition-colors hover:bg-primary/5 hover:text-primary ${
-                            location.pathname === sublink.href
-                              ? "text-primary bg-primary/5"
-                              : "text-muted-foreground"
-                          }`}
-                        >
-                          {sublink.label}
-                        </Link>
+                        'external' in sublink && sublink.external ? (
+                          <a
+                            key={sublink.href}
+                            href={sublink.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 text-sm transition-colors hover:bg-primary/5 hover:text-primary text-muted-foreground"
+                          >
+                            {sublink.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={sublink.href}
+                            to={sublink.href}
+                            className={`block px-4 py-2 text-sm transition-colors hover:bg-primary/5 hover:text-primary ${
+                              location.pathname === sublink.href
+                                ? "text-primary bg-primary/5"
+                                : "text-muted-foreground"
+                            }`}
+                          >
+                            {sublink.label}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>
@@ -131,20 +143,33 @@ export function Header() {
                   <div key={link.label} className="space-y-2">
                     <span className="text-base font-medium text-foreground py-2">{link.label}</span>
                     <div className="pl-4 space-y-2">
-                      {link.submenu.map((sublink) => (
-                        <Link
-                          key={sublink.href}
-                          to={sublink.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={`block text-sm py-1 transition-colors ${
-                            location.pathname === sublink.href
-                              ? "text-primary"
-                              : "text-muted-foreground"
-                          }`}
-                        >
-                          {sublink.label}
-                        </Link>
-                      ))}
+                        {link.submenu.map((sublink) => (
+                          'external' in sublink && sublink.external ? (
+                            <a
+                              key={sublink.href}
+                              href={sublink.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="block text-sm py-1 transition-colors text-muted-foreground hover:text-primary"
+                            >
+                              {sublink.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={sublink.href}
+                              to={sublink.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`block text-sm py-1 transition-colors ${
+                                location.pathname === sublink.href
+                                  ? "text-primary"
+                                  : "text-muted-foreground"
+                              }`}
+                            >
+                              {sublink.label}
+                            </Link>
+                          )
+                        ))}
                     </div>
                   </div>
                 ) : (
