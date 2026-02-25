@@ -27,6 +27,7 @@ const projects = [
     image: "https://static.wixstatic.com/media/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png/v1/fill/w_1920,h_807,al_c,q_90,enc_avif,quality_auto/32e815_a8ff28c8e2f049b9a8793749ac1c9cb3~mv2.png",
     result: "+30% demandes devis",
     description: "Site vitrine artisan couvreur + SEO local",
+    url: "https://www.dsign-toiture.com",
   },
   {
     id: 3,
@@ -150,9 +151,17 @@ export function PortfolioSection() {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <Button variant="ghost" size="sm" className="p-0 h-auto text-primary">
-                  Voir le projet <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="sm" className="p-0 h-auto text-primary">
+                      Voir le projet <ArrowRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </a>
+                ) : (
+                  <Button variant="ghost" size="sm" className="p-0 h-auto text-primary">
+                    Voir le projet <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                )}
               </div>
             </div>
           ))}
