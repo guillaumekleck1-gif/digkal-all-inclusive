@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { FormulaSection } from "@/components/sections/FormulaSection";
+import { LLMSection } from "@/components/sections/LLMSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ResultsSection } from "@/components/sections/ResultsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
