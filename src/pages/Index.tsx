@@ -17,6 +17,7 @@ const Index = () => {
       <HeroSection />
       <TrustSection />
       <FormulaSection />
+      <LLMSection />
       <ProcessSection />
       <ResultsSection />
       <PricingSection />
