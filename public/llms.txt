@@ -1,0 +1,26 @@
+# Digkal
+
+> Agence française de création de sites web professionnels — site livré en 72h dès 45€/mois, SEO inclus, Google Business Profile géré, et référencement IA (LLM/GEO).
+
+Digkal accompagne les TPE, PME et indépendants français pour leur présence en ligne complète : création de site, référencement Google, gestion de la fiche Google Business Profile, création de contenu et optimisation continue. Digkal propose également un service de référencement dans les intelligences artificielles (ChatGPT, Gemini, Perplexity) pour anticiper l'évolution de la recherche.
+
+## Pages
+
+- [Accueil](/): présentation de l'offre tout-en-un, formule mensuelle, processus en 4 étapes.
+- [Offres & tarifs](/offres): détail des formules et prix.
+- [Réalisations](/realisations): portfolio de sites créés par Digkal.
+- [À propos](/a-propos): présentation de l'agence et de son équipe.
+- [Contact](/contact): formulaire de devis gratuit.
+- [Mentions légales](/mentions-legales): informations légales.
+
+## Services
+
+- [Création de site web](/services/creation-site-web): sites vitrines et e-commerce livrés en 72h.
+- [SEO & Référencement](/services/seo-referencement): stratégie SEO complète pour la première page Google.
+- [Google Business Profile](/services/google-business-profile): création et gestion de la fiche Google.
+- [Création de contenu](/services/creation-contenu): textes, visuels et publications régulières.
+- [Optimisation continue](/services/optimisation-continue): suivi mensuel et améliorations continues.
+
+## Optional
+
+- [Mentions légales](/mentions-legales)
